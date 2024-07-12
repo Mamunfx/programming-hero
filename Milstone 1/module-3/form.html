@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stl.css" />
+    <title>Html-5 Form</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Register</li>
+          <li>Sing in</li>
+        </ul>
+      </nav>
+    </header>
+    <body>
+      <form>
+        <label for="Email"> Email adress :
+          <input type="email" id="email" placeholder="Enter email" />
+        </label>
+        <label for="Password"
+          >Password :
+          <input type="text" id="pass" placeholder="Enter Password" />   ****
+        </label>
+
+        <fieldset>                        *****
+          <legend>Pick any one :</legend>  *****
+          <label for="gym"> <input type="radio" name="Sports" /> GYm </label>
+          <label for="Freehand">
+            <input type="radio" name="Sports" /> freehand
+          </label>
+          <label for="Calista">
+            <input type="radio" name="Sports" /> Calista
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Choose any :</legend>
+          <label for="Personal-gym">
+            <input type="checkbox" name="Choose" />
+            Personal Gym
+          </label>
+          <label for="Personal-coach">
+            <input type="checkbox" name="Choose" />
+            Personal Coach
+          </label>
+          <label for="Personal-pool">
+            <input type="checkbox" name="Choose" />
+            Personal Pool
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Please Write quiries (If you have any) :</legend>
+          <textarea name="Comment" cols="60" rows="10"></textarea>     ****
+        </fieldset>
+        <input type="reset" value="Reset" />                           ****
+        <input type="submit" value="Submit" />
+      </form>
+    </body>
+    <footer>
+      <p>&copy; 2019. All right reserved .</p>
+    </footer>
+  </body>
+</html>

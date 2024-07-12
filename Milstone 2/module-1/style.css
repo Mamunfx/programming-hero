@@ -4,16 +4,22 @@ body{
 .calender{
     display: grid;
     grid-template-columns:repeat(7, 1fr);
+    grid-template-rows:50px repeat(8, 1fr);
     row-gap: 20px;
     column-gap: 10px;
 
 }
-.date {
+.date , .day {
     font-size: 1.5rem;
-    height: 40px;
+    /* height: 40px; */
    background-color: chocolate;
    border-radius: 7px;
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+.day{
+    background-color: gray;
+    
 }

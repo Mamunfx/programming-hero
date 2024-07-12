@@ -1,0 +1,19 @@
+body{
+    background-color: aquamarine;
+}
+.calender{
+    display: grid;
+    grid-template-columns:repeat(7, 1fr);
+    row-gap: 20px;
+    column-gap: 10px;
+
+}
+.date {
+    font-size: 1.5rem;
+    height: 40px;
+   background-color: chocolate;
+   border-radius: 7px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

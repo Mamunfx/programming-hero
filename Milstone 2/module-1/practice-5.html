@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid and flex and media quiry practice</title>
     <style>
-        .box{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
+        section{
+            width: 100%;
+            display:grid ;
+            grid-template-columns: repeat(2,1fr);
+            gap: 30px;
+
+        }
+        .box > img{
+            width: 100%;
+        }
+        @media  screen and (max-width :412px ) {
+            section{
+                grid-template-columns: repeat(1,1fr);
+                
+            }
+            
         }
     </style>
 </head>
@@ -19,16 +30,22 @@
             <img src="./food.JPG" alt="">
         </div>
         <div class="box">
-            <div class="box">
                 <h1>Lorem ipsum dolor sit amet.</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi quia perspiciatis nihil blanditiis veritatis libero, impedit repudiandae fugiat perferendis quidem ad temporibus iusto nobis, nisi amet nostrum rerum nesciunt doloremque? Iste quia eius officia molestias est reiciendis eveniet cupiditate optio amet. Incidunt, odit. Qui in ullam ad nisi voluptates Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maiores atque pariatur beatae nihil, est exercitationem modi suscipit fuga laborum saepe inventore, iusto officia perspiciatis? Quae fuga deleniti tempora sequi!
-                </p></div>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi quia perspiciatis nihil blanditiis veritatis libero, impedit repudiandae fugiat perferendis quidem ad temporibus iusto nobis, nisi amet nostrum rerum nesciunt doloremque? Iste quia eius officia molestias est reiciendis eveniet cupiditate optio amet. Incidunt, odit. Qui in ullam ad nisi voluptates Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maiores atque pariatur beatae nihil, est exercitationem modi suscipit fuga laborum saepe inventore, iusto officia perspiciatis? Quae fuga deleniti tempora sequi! Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quia vel! Ab quibusdam odio nam, atque hic corporis. Voluptatibus animi aspernatur hic pariatur, eaque ipsa debitis incidunt tempora in nam laborum maxime? Vero nemo excepturi quae aspernatur voluptates commodi quos.
+                </p>
         </div>
-        <div class="box">
+
+        <div class="box-1">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident sequi optio et tempore amet, unde, distinctio nemo in eaque, necessitatibus veniam ducimus laborum sunt reiciendis minus? Laudantium, quas ea corporis enim at atque explicabo eaque sed vitae tempore. Voluptatum a, obcaecati et necessitatibus quo soluta porro quos quaerat hic sapiente placeat. Numquam vel culpa asperiores aut nisi voluptatem pariatur officiis nam commodi laudantium aliquid quaerat quam neque, esse praesentium libero atque maxime quisquam nemo cum ad! Accusantium, hic assumenda? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, fugit impedit consequatur tempora eius officiis, veniam minus quibusdam, aperiam blanditiis repudiandae iusto ratione. Error ipsum omnis alias distinctio repellat aliquam?
+            </p>
             <img src="./food.JPG" alt="">
         </div>
-        <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus provident sequi optio et tempore amet, unde, distinctio nemo in eaque, necessitatibus veniam ducimus laborum sunt reiciendis minus? Laudantium, quas ea corporis enim at atque explicabo eaque sed vitae tempore. Voluptatum a, obcaecati et necessitatibus quo soluta porro quos quaerat hic sapiente placeat. Numquam vel culpa asperiores aut nisi voluptatem pariatur officiis nam commodi laudantium aliquid quaerat quam neque, esse praesentium libero atque maxime quisquam nemo cum ad! Accusantium, hic assumenda?</p>
+        <!-- <div class="box">
+            
+        </div> -->
     </section>
 </body>
 </html>

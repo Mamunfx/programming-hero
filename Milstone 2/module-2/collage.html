@@ -6,7 +6,7 @@
     <title>Collage</title>
     <style>
         header{
-            height: 35vh;
+            height: 33vh;
             margin-bottom:7vh ;
         }
          img{
@@ -14,22 +14,22 @@
             height: 100%;
         }
         .row{
-            height: 32vh;
+            height: 33vh;
             display: flex;
             gap: 10px;
-            
+            margin-bottom: 10px;
         }
-        .row> img {
+        .row >img , div {
             flex: 1;
+            height: 100%;
         }
         .vertical{
             height: 50%;
         }
-        .grid{
+        .square{
             display: grid;
-            flex: 1;
-            
             grid-template-columns: repeat(2,1fr);
+            height: 100%;
         }
     </style>
 </head>
@@ -48,7 +48,7 @@
     </div>
     <div class="row">
         <img src="./images/F.jpg" alt="">
-        <div class="grid">
+        <div class="square">
             <img src="./images/G.jpg" alt="">
             <img src="./images/G.jpg" alt="">
             <img src="./images/G.jpg" alt="">

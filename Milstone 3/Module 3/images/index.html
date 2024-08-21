@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,49 +22,126 @@
             font-family: "Poppins", sans-serif;
         }
     </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              bikePrimary: '#E76F51',
+              slider: '#E76F511A',
+            }
+          }
+        }
+      }
+    </script>
   </head>
   <body class="font-poppins">
-    <header>
-        <nav>
-            <div class="navbar bg-base-100">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16" />
-                  </svg>
-                </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                  <li><a>Item 1</a></li>
-                  <li><a>Item 3</a></li>
-                </ul>
+    <header class="container mx-auto">
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="flex-1">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
               </div>
-              <a class="btn btn-ghost text-xl">daisyUI</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li><a>Item 1</a></li>
-                <li><a>Item 3</a></li>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>News</a></li>
+                <li><a>Contac</a></li>
               </ul>
             </div>
-            <div class="navbar-end">
-              <a class="btn">Button</a>
+            <a class="text-2xl font-extrabold ">Bike Dekho</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>News</a></li>
+                <li><a>Contac</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <a class="btn bg-bikePrimary text-white">Button</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="carousel w-full bg-slider justify-center items-center lg:mt-12">
+
+        <div id="slide1" class="carousel-item relative w-full ">
+          <div class="flex py-14 justify-center items-center m-auto w-10/12 flex-col lg:flex-row ">
+            <div class="space-y-8 flex-1  ">
+              <h1 class="text-7xl font-extrabold">Ride-on R15 V4 with Smile</h1>
+              <p>Amet minim mollit non deserunt ullamco <br>
+                est sit aliqua dolor do amet sint. Velit officia consequat <br> duis enim velit mollit.</p>
+                <button class="btn bg-bikePrimary text-white">Purchase</button>
+            </div>
+            <div class="flex-1 mt-8 ">
+              <img src="./slider/bike1.png">
             </div>
           </div>
-        </nav>
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+
+        <div id="slide3" class="carousel-item relative w-full ">
+          <div class="flex py-14 justify-center items-center m-auto w-10/12 flex-col lg:flex-row ">
+            <div class="space-y-8 flex-1  ">
+              <h1 class="text-7xl font-extrabold">Ride-on R15 V4 with Smile</h1>
+              <p>Amet minim mollit non deserunt ullamco <br>
+                est sit aliqua dolor do amet sint. Velit officia consequat <br> duis enim velit mollit.</p>
+                <button class="btn bg-bikePrimary text-white">Purchase</button>
+            </div>
+            <div class="flex-1 mt-8 ">
+              <img src="./slider/bike3.png">
+            </div>
+          </div>
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+
+        <div id="slide4" class="carousel-item relative w-full ">
+          <div class="flex py-14 justify-center items-center m-auto w-10/12 flex-col lg:flex-row ">
+            <div class="space-y-8 flex-1  ">
+              <h1 class="text-7xl font-extrabold">Ride-on R15 V4 with Smile</h1>
+              <p>Amet minim mollit non deserunt ullamco <br>
+                est sit aliqua dolor do amet sint. Velit officia consequat <br> duis enim velit mollit.</p>
+                <button class="btn bg-bikePrimary text-white">Purchase</button>
+            </div>
+            <div class="flex-1 mt-8 ">
+              <img src="./slider/bike4.png">
+            </div>
+          </div>
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+
+      </div>
     </header>
-    <main></main>
+    <main class="container mx-auto">
+      
+    </main>
     <footer></footer>
   </body>
 </html>

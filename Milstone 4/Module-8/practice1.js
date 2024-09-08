@@ -66,5 +66,13 @@
 // Task-5:
 // Generate a random number between 10 to 20.
 
-let a = Math.round(Math.random()*10);
-console.log(Math.random());
+// let a = Math.round(Math.random()*20);
+// function rand(param) {
+//     if (a>=10) {
+//         return a;
+//     }
+//     else {
+//         return a= a+10;
+//     }
+// }
+// console.log(rand(a));

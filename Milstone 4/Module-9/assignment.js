@@ -8,11 +8,9 @@
 //     }
 // }
 
-
 // function sendNotification(email) {
-//     let a = email.split('');
 //     let countkey=0;
-//     for (const element of a) {
+//     for (const element of email) {
 //         if (element==='@') {
 //             countkey++;
 //         }
@@ -27,4 +25,16 @@
 //     return resultString;
 // }
 
+// function checkDigitsInName(name) {
+//     if (typeof name !== 'string') {
+//         return "Invalid Input";
+//     }
+//     const num = "0123456789";
+//     for (let element of name) {
+//          if (num.includes(element)) {
+//             return true;
+//          } 
+//     }
+//     return false;
+// }
 

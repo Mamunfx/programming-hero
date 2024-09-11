@@ -30,7 +30,7 @@
 //         return "Invalid Input";
 //     }
 //     const num = "0123456789";
-//     for (let element of name) {
+//     for (const element of name) {
 //          if (num.includes(element)) {
 //             return true;
 //          } 
@@ -38,3 +38,15 @@
 //     return false;
 // }
 
+/*function signature/sample */
+function calculateFinalScore(obj) {
+    if ( typeof obj !== 'object') {
+        return "Invalid Input";
+    }
+    // else{
+    //     return "Invalid Input"
+    // }
+}
+
+console.log(calculateFinalScore({name:'nnoo'}));
+// && value !== null && !Array.isArray(obj)

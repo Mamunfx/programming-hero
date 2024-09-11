@@ -38,15 +38,39 @@
 //     return false;
 // }
 
-/*function signature/sample */
-function calculateFinalScore(obj) {
-    if ( typeof obj !== 'object') {
-        return "Invalid Input";
-    }
-    // else{
-    //     return "Invalid Input"
-    // }
-}
 
-console.log(calculateFinalScore({name:'nnoo'}));
-// && value !== null && !Array.isArray(obj)
+// function calculateFinalScore(obj) {
+//     if (Array.isArray(obj)=== true) {
+//         return "Invalid Input";
+//     }
+//     else if(typeof obj !== 'object'){
+//         return "Invalid Input";
+//     }
+//     let familyMarks=0;
+//     if (obj.isFFamily==true) {
+//         familyMarks=20;
+//     }
+//     let totalMarks = obj.testScore + obj.schoolGrade + familyMarks;
+//     if (totalMarks>=80) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// function  waitingTime(waitingTimes  , serialNumber) {
+//     if (Array.isArray(waitingTimes)===false) {
+//         return "Invalid Input"
+//     }
+//     else if (typeof serialNumber !== 'number' ){
+//         return "Invalid Input"
+//     }
+//     let count = 0;
+//     for (const element of waitingTimes) {
+//         count = count+element;
+//     }
+//     let avgInterTime = Math.round(count/waitingTimes.length);
+//     let seriaLeft = serialNumber-(waitingTimes.length+1);
+//     let prediction = seriaLeft*avgInterTime;
+//     return prediction; 
+// }

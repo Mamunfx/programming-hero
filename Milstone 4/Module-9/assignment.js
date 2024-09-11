@@ -38,7 +38,6 @@
 //     return false;
 // }
 
-
 // function calculateFinalScore(obj) {
 //     if (Array.isArray(obj)=== true) {
 //         return "Invalid Input";

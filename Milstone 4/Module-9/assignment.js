@@ -37,26 +37,27 @@ function checkDigitsInName(name) {
     }
     return false;
 }
-console.log(checkDigitsInName(["Raj"]));
 
-// function calculateFinalScore(obj) {
-//     if (Array.isArray(obj)=== true) {
-//         return "Invalid Input";
-//     }
-//     else if(typeof obj !== 'object'){
-//         return "Invalid Input";
-//     }
-//     let familyMarks=0;
-//     if (obj.isFFamily==true) {
-//         familyMarks=20;
-//     }
-//     let totalMarks = obj.testScore + obj.schoolGrade + familyMarks;
-//     if (totalMarks>=80) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
+
+function calculateFinalScore(obj) {
+    if (Array.isArray(obj)=== true) {
+        return "Invalid Input";
+    }
+    else if(typeof obj !== 'object'){
+        return "Invalid Input";
+    }
+    let familyMarks=0;
+    if (obj.isFFamily==true) {
+        familyMarks=20;
+    }
+    let totalMarks = obj.testScore + obj.schoolGrade + familyMarks;
+    if (totalMarks>=80) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(calculateFinalScore({ name: "Rajib", testScore: 15,  schoolGrade: 25, isFFamily : true  }));
 
 // function  waitingTime(waitingTimes  , serialNumber) {
 //     if (Array.isArray(waitingTimes)===false) {

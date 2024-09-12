@@ -1,12 +1,15 @@
 
-// function calculateTax(income, expenses) {
-//     if ((income<0||expenses<0) || (expenses>income)) {
-//         return "Invalid Input";
-//     } else {
-//         let tax = ((income-expenses)*.20) ;
-//         return tax;
-//     }
-// }
+function calculateTax(income, expenses) {
+    if ((income<0||expenses<0) || (expenses>income)) {
+        return "Invalid Input";
+    } else {
+        let tax = ((income-expenses)*.20) ;
+        return tax;
+    }
+}
+
+console.log(calculateTax(6000, -1500));
+
 
 // function sendNotification(email) {
 //     let countkey=0;

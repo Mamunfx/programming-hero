@@ -24,6 +24,8 @@ function sendNotification(email) {
     return resultString;
 }
 
+console.log(sendNotification('zihad@gmail.com'));
+
 // function checkDigitsInName(name) {
 //     if (typeof name !== 'string') {
 //         return "Invalid Input";

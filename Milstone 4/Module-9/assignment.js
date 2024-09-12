@@ -24,7 +24,6 @@ function sendNotification(email) {
     return resultString;
 }
 
-
 function checkDigitsInName(name) {
     if (typeof name !== 'string') {
         return "Invalid Input";
@@ -37,7 +36,6 @@ function checkDigitsInName(name) {
     }
     return false;
 }
-
 
 function calculateFinalScore(obj) {
     if (Array.isArray(obj)=== true) {

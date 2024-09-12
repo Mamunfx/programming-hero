@@ -24,20 +24,20 @@ function sendNotification(email) {
     return resultString;
 }
 
-console.log(sendNotification('zihad@gmail.com'));
 
-// function checkDigitsInName(name) {
-//     if (typeof name !== 'string') {
-//         return "Invalid Input";
-//     }
-//     const num = "0123456789";
-//     for (const element of name) {
-//          if (num.includes(element)) {
-//             return true;
-//          } 
-//     }
-//     return false;
-// }
+function checkDigitsInName(name) {
+    if (typeof name !== 'string') {
+        return "Invalid Input";
+    }
+    const num = "0123456789";
+    for (const element of name) {
+         if (num.includes(element)) {
+            return true;
+         } 
+    }
+    return false;
+}
+console.log(checkDigitsInName(["Raj"]));
 
 // function calculateFinalScore(obj) {
 //     if (Array.isArray(obj)=== true) {

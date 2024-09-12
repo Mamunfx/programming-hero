@@ -57,21 +57,20 @@ function calculateFinalScore(obj) {
         return false;
     }
 }
-console.log(calculateFinalScore({ name: "Rajib", testScore: 15,  schoolGrade: 25, isFFamily : true  }));
 
-// function  waitingTime(waitingTimes  , serialNumber) {
-//     if (Array.isArray(waitingTimes)===false) {
-//         return "Invalid Input"
-//     }
-//     else if (typeof serialNumber !== 'number' ){
-//         return "Invalid Input"
-//     }
-//     let count = 0;
-//     for (const element of waitingTimes) {
-//         count = count+element;
-//     }
-//     let avgInterTime = Math.round(count/waitingTimes.length);
-//     let seriaLeft = serialNumber-(waitingTimes.length+1);
-//     let prediction = seriaLeft*avgInterTime;
-//     return prediction; 
-// }
+function  waitingTime(waitingTimes  , serialNumber) {
+    if (Array.isArray(waitingTimes)===false) {
+        return "Invalid Input"
+    }
+    else if (typeof serialNumber !== 'number' ){
+        return "Invalid Input"
+    }
+    let count = 0;
+    for (const element of waitingTimes) {
+        count = count+element;
+    }
+    let avgInterTime = Math.round(count/waitingTimes.length);
+    let seriaLeft = serialNumber-(waitingTimes.length+1);
+    let prediction = seriaLeft*avgInterTime;
+    return prediction; 
+}

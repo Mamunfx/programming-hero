@@ -1,4 +1,3 @@
-
 function calculateTax(income, expenses) {
     if ((income<0||expenses<0) || (expenses>income)) {
         return "Invalid Input";
@@ -8,25 +7,22 @@ function calculateTax(income, expenses) {
     }
 }
 
-console.log(calculateTax(6000, -1500));
-
-
-// function sendNotification(email) {
-//     let countkey=0;
-//     for (const element of email) {
-//         if (element==='@') {
-//             countkey++;
-//         }
-//     }
-//     if (countkey !== 1) {
-//         return "Invalid Email"
-//     }
-//     let newStr = email.split("@");
-//     let username = newStr[0];
-//     let domain  = newStr[1];
-//     let resultString = `${username} sent you an email from ${domain} `   
-//     return resultString;
-// }
+function sendNotification(email) {
+    let countkey=0;
+    for (const element of email) {
+        if (element==='@') {
+            countkey++;
+        }
+    }
+    if (countkey !== 1) {
+        return "Invalid Email"
+    }
+    let newStr = email.split("@");
+    let username = newStr[0];
+    let domain  = newStr[1];
+    let resultString = `${username} sent you an email from ${domain} `   
+    return resultString;
+}
 
 // function checkDigitsInName(name) {
 //     if (typeof name !== 'string') {

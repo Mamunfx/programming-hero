@@ -1,7 +1,3 @@
-
-
-// Dynamic Style, GetAttribute, SetAttribute, InnerText, InnerHTML
-
 /* 
 <script>
 const liCollection = document.getElementsByTagName('li');
@@ -36,4 +32,30 @@ for(const li of someLi){
     // console.log(li.innerText);
 }
 </script> 
+*/
+
+
+// Dynamic Style, GetAttribute, SetAttribute, InnerText, InnerHTML
+
+
+
+// Styling Dom Properties, Add And Remove Css Class Using JS
+/*
+
+const sections = document.querySelectorAll('section');
+for(const section of sections){
+    section.style.border = '2px solid steelblue';
+    section.style.marginBottom = '5px';
+    section.style.borderRadius = '15px';
+    section.style.paddingLeft = '7px';
+    section.style.backgroundColor = 'lightgray';
+}
+
+// const placesContainer = document.getElementById('places-container');
+// placesContainer.style.backgroundColor = 'yellow';
+
+const placesContainer = document.getElementById('places-container');
+placesContainer.classList.add('text-center');
+placesContainer.classList.remove('large-text')
+
 */

@@ -9,6 +9,9 @@
     <button onclick="makeGreen()">buttun 1</button>
     <button id="secondButton">buttun 2</button>
     <button id="ThirdButton">buttun 3</button>
+    <br>
+    <br>
+    <input id="comment_box" type="text">
     <script>
         function makeGreen(){
             document.body.style.backgroundColor = 'green';
@@ -20,7 +23,9 @@
             document.getElementById("ThirdButton").style.backgroundColor = "blue";
         })
 
-
+        document.getElementById("comment_box").addEventListener("keypress",function(){
+            console.log(event.target.value);
+        })
     </script>
 </body>
 </html>

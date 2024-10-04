@@ -45,7 +45,7 @@ console.log(num1);
 multiply(num1, num2);
 console.log(num1);
 
-// object and array are pass by reference
+// object and array are pass by reference   // soo it changes the main value !
 let student1 = {name: 'Jalil', partner: 'borsha'};
 let student2 = {name: 'raj', partner: 'anika'};
 

@@ -14,7 +14,9 @@ Falsy:
 3. '' (empty string)
 4. undefined
 5. null
+
 */
+
 let x = [5, 6];
 console.log(x);
 if(x){

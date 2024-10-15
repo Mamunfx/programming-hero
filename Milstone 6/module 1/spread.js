@@ -7,12 +7,12 @@ console.log(arrayMax)
 // use spread operator to copy
 const friends = [4, 5, 87, 9];
 const bondhu = friends;
-const dosto = [...friends] // copy
+const dosto = [...friends] // copy korse kintu nize arekta array banaia nise and new kisu add korle new array tar moddhe jay puran tar moddhe na ! 
 console.log(dosto)
 friends.push(100)
 console.log(dosto)
 console.log(friends)
 
 // advanced 
-const sonkha = [...friends, 9999] // add extra elements while copy
+const sonkha = [...friends, 9999] // add extra elements while copy, uporer normal way er shortcut eta!
 console.log(sonkha)

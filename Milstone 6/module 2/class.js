@@ -35,3 +35,4 @@ const tapan = new Teacher('Tapon sir', 'Physics')
 console.log(tapan);
 
 const rashid = new Teacher('Rashid', 'English')
+console.log(rashid);

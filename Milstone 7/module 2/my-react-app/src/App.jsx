@@ -16,12 +16,17 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <Cat></Cat>
+      <DynamicWayOfUsingComponent></DynamicWayOfUsingComponent>
+      <CssWithClassName></CssWithClassName>
+      <CssInsideComponent></CssInsideComponent>
+      <ObjProps Nam='OMar' thikana={1339}></ObjProps>
+      <ObjProps Nam='yunus' thikana={1210}></ObjProps>
+      <ObjProps Nam='jhinku' ></ObjProps>
     </>
   )
 }
 
-function Cat() {
+function DynamicWayOfUsingComponent() {
   let catName=12;
   let obj ={names:12 , age:34}
   return(
@@ -34,9 +39,36 @@ function Cat() {
 function CssWithClassName() {
 
   return (
-    <h3>Dont worry it will not take a long</h3>,
-    <p>Name:</p>,
+    <div className='sundorBorder'>
+    <h3>Dont worry it will not take a long</h3>
+    <p>Name:</p>
     <p>Age:</p>
+    </div>
   )
 }
+
+function CssInsideComponent() {
+  const CssInside={
+    border:'2px solid yellow',
+    backgroundColor: 'green'
+  }
+  return (
+    <div style={CssInside}>
+    <h3>Dont worry it will not take a long</h3>
+    <p>Name:</p>
+    <p>Age:</p>
+    </div>
+  )
+}
+
+function ObjProps({Nam='',thikana=0}) {
+  return (
+    <div className='sundorBorder'>
+    <h3>Dont worry it will not take a long</h3>
+    <p>Nam: {Nam}</p>
+    <p>Thikana:{thikana}</p>
+    </div>
+  )
+}
+
 export default App

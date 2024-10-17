@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.sundorBorder{
+  border: 2px solid rgba(214, 99, 4, 0.918);
+  border-radius:1rem;
+}

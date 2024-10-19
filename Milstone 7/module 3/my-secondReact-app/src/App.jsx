@@ -1,10 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import StateManage from './StateManage'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   function events() {
     alert('show alert')
@@ -20,7 +18,7 @@ function App() {
       <button onClick={event2}>BUtton2</button>      
       <button onClick={()=>{alert('button 3 clicked')}}>BUtton3</button>      
       <button onClick={()=>{event2()}}>BUtton4</button>      
-
+      <StateManage></StateManage>
     </>
   )
 }

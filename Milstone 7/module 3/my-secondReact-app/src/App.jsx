@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import StateManage from './StateManage'
-
+import UseEffect from './UseEffect'
 function App() {
 
   function events() {
@@ -19,6 +19,7 @@ function App() {
       <button onClick={()=>{alert('button 3 clicked')}}>BUtton3</button>      
       <button onClick={()=>{event2()}}>BUtton4</button>      
       <StateManage></StateManage>
+      <UseEffect></UseEffect>
     </>
   )
 }

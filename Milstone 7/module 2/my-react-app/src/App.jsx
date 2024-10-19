@@ -2,9 +2,16 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import NewFile from './newFile'
+import Singer from './Singer'
 
 function App() {
-
+  const singers = [
+    {id: 1,  name: 'Dr. Mahfuzur', age: 68},
+    {id: 2, name: 'Eva Rahman', age: 38},
+    {id: 3, name: 'Shuvro Dev', age: 58},
+    {id: 4, name: 'Pritom', age: 28},
+  ]
   return (
     <>
       <div>
@@ -20,8 +27,15 @@ function App() {
       <CssWithClassName></CssWithClassName>
       <CssInsideComponent></CssInsideComponent>
       <ObjProps Nam='OMar' thikana={1339}></ObjProps>
+      <ObjProps Nam='kiran' thikana={12}></ObjProps>
       <ObjProps Nam='yunus' thikana={1210}></ObjProps>
       <ObjProps Nam='jhinku' ></ObjProps>
+      <PriceTag identity='eru' price='93'></PriceTag>
+      <PriceTag identity='alphs' price='91'></PriceTag>
+
+      {
+        singers.map(singer => <Singer singerInfo={singer}></Singer>)
+      }
     </>
   )
 }
@@ -68,6 +82,13 @@ function ObjProps({Nam='',thikana=0}) {
     <p>Nam: {Nam}</p>
     <p>Thikana:{thikana}</p>
     </div>
+  )
+}
+
+function PriceTag({identity,price}) {
+  
+  return(
+    <NewFile nams={identity} price={price}></NewFile>
   )
 }
 

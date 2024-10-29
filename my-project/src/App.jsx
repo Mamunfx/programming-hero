@@ -1,6 +1,12 @@
 import './App.css'
-
+import { LineChart, Line,Legend,Tooltip,YAxis,XAxis,CartesianGrid } from 'recharts';
 function App() {
+  const data = [
+    {name: 'Page A', uv: 400, pv: 2100, amt: 2600},
+    {name: 'Page b', uv: 200, pv: 2440, amt: 3400},
+    {name: 'Page c', uv: 300, pv: 2500, amt: 2700},
+    {name: 'Page d', uv: 350, pv: 1400, amt: 2900}
+ ];
 
   return (
     <>
@@ -23,6 +29,19 @@ function App() {
     </ul>
   </div>
 </div>
+
+<LineChart width={730} height={250} data={data}
+  margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+  <CartesianGrid strokeDasharray="3 3" />
+  <XAxis dataKey="name" />
+  <YAxis />
+  <Tooltip />
+  <Legend />
+  <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+  <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+  <Line type="monotone" dataKey="amt" stroke="#82ca9d" />
+</LineChart>
+
     </>
   )
 }

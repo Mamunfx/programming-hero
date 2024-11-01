@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-
+// stateful form hoilo input value gula state er vitore store kore
 const StatefulForm = () => {
-    const [name, setName] = useState('Rojoni Klanto');
+    const [name , setName]=useState('rojoni')
     const [email, setEmail] = useState(null);
     const [password, setPassword] = useState(null);
     const [error, setError] = useState('')

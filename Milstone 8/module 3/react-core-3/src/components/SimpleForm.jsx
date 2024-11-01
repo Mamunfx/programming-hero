@@ -1,4 +1,4 @@
-
+// simple form e kono input store e kore na
 const SimpleForm = () => {
     const handleForm =e=>{
         e.preventDefault();

@@ -1,12 +1,38 @@
-
+import {  createUserWithEmailAndPassword } from "firebase/auth";
+import auth from '../firebase.init'
+import { useState } from "react";
 const Register = () => {
+    const [Massage,setMessage]=useState('');
+     const [Success,setSuccess]=useState(false);
+     const [errorMessage,setErrorMessage]=useState('');
     const handleForm=(e)=>{
         e.preventDefault();
+        const email =e.target.email.value;        
+        const password =e.target.password.value;
+        setMessage('');
+        setErrorMessage('');
+        setSuccess(false);
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+
+        if (!passwordRegex.test(password)) {
+          setErrorMessage('password must contain many charecter , speciall charecter aswell');
+          return;
+        }
+        createUserWithEmailAndPassword(auth,email,password)
+        .then(result=>{
+          console.log(result.user); 
+          setSuccess(true);
+        })
+        .catch(error=>{
+          console.log('error',error.message);
+          setMessage(error.message);
+          setSuccess(false);
+        })
     }
     return (
       <div className="flex flex-col w-11/12 justify-center align-middle items-center">
         <h1>Register</h1>
-        <form>
+        <form onSubmit={handleForm}>
           <label className="input input-bordered flex items-center gap-2">
             <input type="email" placeholder="Email" name="email" />
           </label>
@@ -24,10 +50,15 @@ const Register = () => {
             clipRule="evenodd"
           />
         </svg>
-        <input type="password" />
+        <input type="password" name="password"/>
       </label>
       <button className="btn btn-accent">sing up</button>
         </form>
+        {
+          Success? <h1 className="text-green-600">Successfully added the email</h1> : ""
+        }
+        <h1>{Massage}</h1>
+        <h1>{errorMessage}</h1>
       </div>
     );
 };

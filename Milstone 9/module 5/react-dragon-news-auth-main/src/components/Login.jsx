@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 const Login = () => {
 
-  const {signInUser}=useContext(AuthContext);
+  const {signInUser,user}=useContext(AuthContext);
   const handlesingin=(e)=>{
     e.preventDefault();
     const email=e.target.email.value;
@@ -18,6 +18,7 @@ const Login = () => {
             console.log('error',error.message);
         })
   }
+  
   return (
     <div className="flex justify-center items-center mt-12">
      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">

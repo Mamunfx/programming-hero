@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import userIcon from "../assets/user.png";
+
+import  { AuthContext } from "./Authprovider/Authprovider";
+import { useContext } from 'react';
+
+
 const Navbar = () => {
+  const {user,singout}=useContext(AuthContext);
   return (
     <div className="flex justify-between items-center">
       <div className=""></div>
@@ -13,7 +19,12 @@ const Navbar = () => {
         <div className=" ">
           <img src={userIcon} alt="" />
         </div>
-        <Link to="/AuthLayout" className="btn bg-black text-base-100">Login</Link>
+        {
+          user && user?.email ?
+          (<button onClick={singout}>Log-out</button>)
+          :(<Link to="/AuthLayout" className="btn bg-black text-base-100">Login</Link>)
+        }
+        
       </div>
     </div>
   );

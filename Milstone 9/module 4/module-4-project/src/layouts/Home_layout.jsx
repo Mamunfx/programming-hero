@@ -5,6 +5,8 @@ import Marquee from "react-fast-marquee";
 import Leftbar from './../components/layout component/Leftbar';
 import MainLayout from './../components/layout component/MainLayout';
 import Right from './../components/layout component/Right';
+import NewsLayout from "../components/NewsLayout";
+import { Outlet } from 'react-router-dom';
 
 const Home_layout = () => {
   return (
@@ -25,7 +27,7 @@ const Home_layout = () => {
         <Leftbar ></Leftbar>
         </div>
        <div className="col-span-6">
-       <MainLayout></MainLayout>
+       <Outlet></Outlet>
        </div>
        <div className="col-span-3">
        <Right ></Right>

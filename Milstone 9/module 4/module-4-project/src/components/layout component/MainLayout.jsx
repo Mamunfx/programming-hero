@@ -3,7 +3,7 @@ import React from 'react';
 const MainLayout = () => {
     return (
         <div>
-            <h1>Main section </h1>
+            <h1>Dragon News Home</h1>
         </div>
     );
 };

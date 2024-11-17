@@ -4,6 +4,8 @@ import CategoryNews from "../pages/CategoryNews";
 import AuthLayout from "../components/AuthLayout/AuthLayout";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import PrivateRoute from "../components/PrivateRoute";
+import Private from "../components/Private";
 
 
 const router = createBrowserRouter([
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
     path: "*",
     element: <h1>Error</h1>,
   },
+  {
+    path:"User",
+    element: (
+    <PrivateRoute>
+      <Private></Private>
+    </PrivateRoute>
+    ),
+  }
 ]);
 
 export default router;

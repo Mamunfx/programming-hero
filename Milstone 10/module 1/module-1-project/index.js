@@ -29,11 +29,17 @@ const data =[
     },
     ]
 app.use(cors());
+app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 app.get('/data',(req,res)=>{
     res.send(data);
+})
+app.post('/data',(req,res)=>{
+console.log('post api hitting');
+  console.log(req.body);
+  res.send(data)
 })
 app.listen(port, () => {
   console.log(`Server is running on port : ${port}`)

@@ -10,7 +10,7 @@ function App() {
     const form = event.target;
     const nam= event.target.nam.vlaue;
     const email= form.email.value;
-    const user= {nam,email};
+    const user= {email};
     console.log(user);
     
 

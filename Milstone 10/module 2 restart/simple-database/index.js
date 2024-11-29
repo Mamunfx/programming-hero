@@ -51,6 +51,31 @@ async function run() {
       res.send(result)
     })
 
+    app.get("/users/:id",async(req,res)=>{
+      const id= req.params.id;
+      console.log(`detials of id : `,id);
+      const query ={_id: new ObjectId(id)}
+      const user = await userCollection.findOne(query);
+      res.send(user)
+    })
+
+    app.put("/users/:id",async(req,res)=>{
+      const id= req.params.id;
+      const updatedUser=req.body;
+      console.log(updatedUser);
+
+      const filter={_id: new ObjectId(id)}
+      const options={upsert:true}
+      const databaseUpdater={
+        $set:{
+          name: updatedUser.name,
+          email: updatedUser.email
+        }
+      }
+      const result=await userCollection.updateOne(filter,databaseUpdater,options);
+      res.send(result);
+    })
+
     app.get("/", (req, res) => {
       res.send("Simple Database is running");
     });

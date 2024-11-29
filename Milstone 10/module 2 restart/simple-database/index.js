@@ -1,11 +1,11 @@
 const express = require('express');
 const cors = require('cors');
-const { MongoClient, ServerApiVersion } = require('mongodb');
-
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.PORT || 5002;
 const app = express();
 
 app.use(cors());
+//Middleware
 app.use(express.json());
 
 const uri = "mongodb+srv://md01993049420:7wSVHtP2LYabFskz@cluster5.ere94.mongodb.net/?retryWrites=true&w=majority&appName=Cluster5";
@@ -21,9 +21,14 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     await client.connect();
-    const database = client.db("userdb");
-    const userCollection = database.collection("users");
 
+    const userCollection = client.db("userdb").collection("users");
+
+    app.get('/users',async(req,res)=>{
+      const cursor= userCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+    })
     app.post("/users", async (req, res) => {
       try {
         const user = req.body;
@@ -37,6 +42,14 @@ async function run() {
         res.status(500).send({ message: "Failed to insert user", error: err });
       }
     });
+
+    app.delete("/users/:id",async(req,res)=>{
+      const id= req.params.id;
+      console.log(`delete from database`,id);
+      const query ={_id: new ObjectId(id)}
+      const result = await userCollection.deleteOne(query);
+      res.send(result)
+    })
 
     app.get("/", (req, res) => {
       res.send("Simple Database is running");

@@ -21,9 +21,11 @@ const router = createBrowserRouter([
     element: <AddCoffe></AddCoffe>,
   },
   {
-    path: "/UpdateCoffe",
+    path: "/UpdateCoffe/:id",
     element: <UpdateCoffe></UpdateCoffe>,
+    loader:({params})=>fetch(`http://localhost:5001/coffee/${params.id}`)
   },
+ 
 ]);
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>

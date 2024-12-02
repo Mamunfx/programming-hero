@@ -10,6 +10,8 @@ import './index.css'
 import App from './App.jsx'
 import Singup from "./Singup.jsx";
 import AuthProvider from "./AuthProvider.jsx";
+import Users from "./Users.jsx";
+import Singin from "./Singin.jsx";
 
 
 const router = createBrowserRouter([
@@ -30,7 +32,18 @@ const router = createBrowserRouter([
   {
     path:"/singup",
     element:<Singup></Singup>
-  }
+  },
+  {
+    path:"/users",
+    element:<Users></Users>,
+    loader:()=>fetch('http://localhost:5001/users')
+  },
+  
+  {
+    path:"/singin",
+    element:<Singin></Singin>,
+  },
+  
  
 ]);
 createRoot(document.getElementById('root')).render(

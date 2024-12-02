@@ -8,8 +8,30 @@ const Singup = () => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
-        console.log(email,password);
-        createUser(email,password);
+        const Name = event.target.Name.value;
+
+        createUser(email,password) /// this is the authentication function and the rest is posting data to db.
+        .then(result=>{
+            console.log(result.user);
+            const createdAt= result?.user?.metadata?.createdAt;
+            const newUser ={Name,email,createdAt}
+            fetch('http://localhost:5001/users',{
+                method:'POST',
+                headers:{
+                    'content-type':'application/json'
+                },
+                body:JSON.stringify(newUser)
+            })
+            .then(res=> res.json())
+            .then(data=>{
+                console.log(data);
+                
+                if (data.insertedId) {
+                    console.log("Singup Successful and id is : ",data.insertedId);
+                    
+                }
+            })
+        })
     }
     return (
         <div>
@@ -24,6 +46,12 @@ const Singup = () => {
     </div>
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <form className="card-body" onSubmit={handleForm}>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Name</span>
+          </label>
+          <input type="text" placeholder="type your name" name='Name' className="input input-bordered"  />
+        </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>

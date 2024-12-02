@@ -5,7 +5,7 @@ const Users = () => {
     const loaderInfo = useLoaderData();
     const [users,setusers]=useState(loaderInfo);
     const handleDelete=(id)=>{
-        fetch(`http://localhost:5001/users/${id}`,{
+        fetch(`https://coffe-mongodb-hrffoye3v-md-moonzoor-mamun-munnas-projects.vercel.app/users/${id}`,{
             method:'DELETE',
         })
         .then(res=> res.json())

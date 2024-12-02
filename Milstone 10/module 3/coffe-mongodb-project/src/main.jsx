@@ -14,7 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    loader:()=>fetch('http://localhost:5001/coffee')
+    loader:()=>fetch('https://coffe-mongodb-hrffoye3v-md-moonzoor-mamun-munnas-projects.vercel.app/coffee')
   },
   {
     path: "/AddCoffe",
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/UpdateCoffe/:id",
     element: <UpdateCoffe></UpdateCoffe>,
-    loader:({params})=>fetch(`http://localhost:5001/coffee/${params.id}`)
+    loader:({params})=>fetch(`https://coffe-mongodb-hrffoye3v-md-moonzoor-mamun-munnas-projects.vercel.app/coffee/${params.id}`)
   },
  
 ]);

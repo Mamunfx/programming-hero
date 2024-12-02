@@ -14,7 +14,7 @@ const AddCoffe = () => {
         const data={Name,supplier,taste,category,details,photo};
         console.log(data);
         
-        fetch("http://localhost:5001/coffee",{
+        fetch("https://coffe-mongodb-hrffoye3v-md-moonzoor-mamun-munnas-projects.vercel.app/coffee",{
             method:'POST',
             headers:{
                 'content-type':'application/json'

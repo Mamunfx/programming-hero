@@ -15,7 +15,7 @@ const Singup = () => {
             console.log(result.user);
             const createdAt= result?.user?.metadata?.createdAt;
             const newUser ={Name,email,createdAt}
-            fetch('https://coffe-mongodb-hrffoye3v-md-moonzoor-mamun-munnas-projects.vercel.app/users',{
+            fetch('http://localhost:5001/users',{
                 method:'POST',
                 headers:{
                     'content-type':'application/json'

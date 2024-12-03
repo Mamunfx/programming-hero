@@ -16,7 +16,7 @@ const Singin = () => {
             const createdAt = result.user.metadata.createdAt;
             const loginInfo={email,createdAt}
 
-            fetch(`https://coffe-mongodb-hrffoye3v-md-moonzoor-mamun-munnas-projects.vercel.app/users`,{
+            fetch(`http://localhost:5001/users`,{
                 method: 'PATCH',
                 headers:{
                     'content-type': 'application/json'

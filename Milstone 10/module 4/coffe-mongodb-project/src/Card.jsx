@@ -18,7 +18,7 @@ const handleDelete=_id=>{
   }).then((result) => {
     if (result.isConfirmed) {
       
-      fetch(`https://coffe-mongodb-hrffoye3v-md-moonzoor-mamun-munnas-projects.vercel.app/coffee/${_id}`,{
+      fetch(`http://localhost:5001/coffee/${_id}`,{
         method:'DELETE',
       })
       .then(res=>res.json())

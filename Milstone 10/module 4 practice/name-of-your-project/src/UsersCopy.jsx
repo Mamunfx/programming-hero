@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 
-const Users = () => {
+const UsersCopy = () => {
     const loaderInfo = useLoaderData();
     const [users,setusers]=useState(loaderInfo);
     const handleDelete=(id)=>{
-        fetch(`http://localhost:5001/users/${id}`,{
+        fetch(`https://module-4-server.vercel.app/users/${id}`,{
             method:'DELETE',
         })
         .then(res=> res.json())
@@ -109,7 +109,6 @@ const Users = () => {
                 <th>Serial</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Sing up time</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -119,7 +118,6 @@ const Users = () => {
                     <th>{idx+1}</th>
                     <td>{user.Name}</td>
                     <td>{user.email}</td>
-                    <td>{user.createdAt}</td>
                     <td className='space-x-2'>
                         <button className='btn btn-accent'>Edit</button>
                         <button className='btn btn-accent'
@@ -138,4 +136,4 @@ const Users = () => {
     );
 };
 
-export default Users;
+export default UsersCopy;
